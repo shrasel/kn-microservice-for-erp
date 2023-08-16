@@ -9,23 +9,25 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "payments")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
+    @JoinColumn(name = "order_id")
+    private Order order;
 
-    private LocalDate orderDate;
-    private BigDecimal totalAmount;
-    private OrderStatus orderStatus;
-    private String shippingAddress;
+    private LocalDate paymentDate;
+    private BigDecimal paymentAmount;
+    private PaymentMethod paymentMethod;
 
     // Getters and setters
 }
+
+
+
