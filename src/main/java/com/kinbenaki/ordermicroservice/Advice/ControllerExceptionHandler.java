@@ -1,4 +1,4 @@
-package com.kinbenaki.ordermicroservice.Controller.Advice;
+package com.kinbenaki.ordermicroservice.Advice;
 
 import com.kinbenaki.ordermicroservice.Exception.ProductNotFoundException;
 import org.springframework.http.HttpStatus;
